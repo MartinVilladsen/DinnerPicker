@@ -10,17 +10,17 @@ class SallingGroupService
         $this->api = $api;
     }
 
-    public function getRelevantFor($productName)
+    public function getRelevant($productName)
     {
         return $this->api->getRelevantFood($productName);
     }
 
-    public function getSimilarFor($productId)
+    public function getSimilar($productId)
     {
         return $this->api->getSimilarProducts($productId);
     }
 
-    public function getBoughtTogetherFor($productId)
+    public function getBoughtTogether($productId)
     {
         return $this->api->getBoughtTogether($productId);
     }

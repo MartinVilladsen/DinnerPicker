@@ -23,17 +23,23 @@ class SallingGroupController extends Controller
         return view('food.index', compact('categories'));
     }
 
-    public function search(Request $request, SallingGroupService $service)
+    public function show(SallingGroupService $service, $category)
     {
-        $request->validate([
-            'category' => 'required|string',
-        ]);
-
-        $results = $service->getRelevantFor($request->input('category'));
+        $results = $service->getRelevant($category);
 
         return view('food.results', [
             'results' => $results['suggestions'],
-            'category' => $request->input('category')
+            'category' => $category
+        ]);
+    }
+
+    public function boughtTogether(SallingGroupService $service, $prodId)
+    {
+        $results = $service->getBoughtTogether($prodId);
+        
+        return view('food.boughtTogether', [
+            'results' => $results,
+            'prodId' => $prodId
         ]);
     }
 }

@@ -20,17 +20,5 @@
         @endif
     </head>
     <body>
-        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm text-orange-50 mb-6 not-has-[nav]:hidden">
-            <nav class="flex items-center justify-start gap-4">
-                    <a>
-                        Dashboard
-                    </a>
-
-                </nav>
-        </header>
-        <div class="flex">
-            <p class="justify-end text-[#FBD38D]">Hello</p>
-        </div>
-            
     </body>
 </html>
