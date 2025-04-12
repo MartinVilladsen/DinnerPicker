@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\ProductSuggestionService;
 use App\Services\SallingGroupService;
 
 class SallingGroupController extends Controller
